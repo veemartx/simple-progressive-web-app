@@ -1,13 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Pwa</title>
 
-    <link rel="shortcut icon" href="assets/icons/apple-logo-macintosh-mac-os-x-lion-macos-macbook-operating-system-apple-logo-png-clip-art-thumbnail.png">
+    <!-- manifest  -->
+    <link rel="manifest" href="manifest.json">
+    <!-- manifest  -->
+
+
+
+    <!-- styles -->
+    <link rel="stylesheet" href="libs/semanticui/semantic.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- styles -->
+
+
+    <link rel="shortcut icon"
+        href="assets/icons/apple-logo-macintosh-mac-os-x-lion-macos-macbook-operating-system-apple-logo-png-clip-art-thumbnail.png">
 </head>
+
 <body>
-    
+
+    <div class="ui grid">
+        <div class="re sixteen wide column">
+
+        </div>
+        <div class="g sixteen wide column">
+            <div class="ui four column stackable grid segment" style="max-width: 85em;margin: auto;">
+                <div class="re sixteen wide column">
+
+                    <div class="onlineMessage ui success mini message"
+                        style="text-align: center;height: 2em;padding: 3px !important;display: none;">
+                        Yey ! You are back Offline 😀
+                    </div>
+
+                    <div class="offlineMessage ui error mini message"
+                        style="text-align: center;height: 2em;padding: 3px !important;display: none;">
+                        Oops ! You are Offline 😭
+                    </div>
+
+                </div>
+
+
+                <div class="logo re one wide column">
+                    <img src="assets/icons/android-icon-192x192.png" alt="">
+                </div>
+                <div class="re fifteen wide column" style="border-bottom: 2px solid rgb(241, 241, 241);">
+                    <div class="title">
+                        Vilx Sample Progressive Web App
+                    </div>
+
+                </div>
+
+                <div class="sixteen wide column"></div>
+
+                <div class="re column">
+                    <div class="ui segment">
+                        <div class="imageB">
+                            <img src="assets/images/0227QDT3xYwn3xEOpyiJpNU-1.v_1574212824.jpg" alt=""
+                                style="width: 100%;height: auto;">
+                        </div>
+
+                        <div class="viewBtn">
+                            <button class="ui purple basic button">
+                                View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="re column">
+                    <div class="ui segment">
+                        <div class="imageB">
+                            <img src="assets/images/13-inch-macbook-pro-sale-image.png" alt=""
+                                style="width: 100%;height: auto;">
+                        </div>
+
+                        <div class="viewBtn">
+                            <button class="ui purple basic button">
+                                View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="re column">
+                    <div class="ui segment">
+                        <div class="imageB">
+                            <img src="assets/images/314AC997-DB5B-4921-8824-09EE3ACD994F-780x437.jpeg" alt=""
+                                style="width: 100%;height: auto;">
+                        </div>
+
+                        <div class="viewBtn">
+                            <button class="ui purple basic button">
+                                View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="re column">
+                    <div class="ui segment">
+                        <div class="imageB">
+                            <img src="assets/images/FJ83_B1606E0F-2A86-4BD2-8BBC-6E9A74B33F12_large.jpg" alt=""
+                                style="width: 100%;height: auto;">
+                        </div>
+
+                        <div class="viewBtn">
+                            <button class="ui purple basic button">
+                                View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+
+    // register a service worker
+    if (!('serviceWorker' in navigator)) {
+
+        console.log('Sw is not supported')
+    }
+
+    // 
+    navigator.serviceWorker.register('sw.js')
+
+        .then((reg) => {
+            console.log('service worker registered');
+
+        })
+
+        .catch((err) => {
+            console.log(err);
+        })
+
+
+
+
+
+
+
+</script>
+<script src="libs/jquery/jquery.js"></script>
+<script src="libs/semanticui/semantic.min.js"></script>
+<script src="js/index.js"></script>
+
 </html>
